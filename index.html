@@ -9,9 +9,49 @@
 
 <body>
 	<h1 style="margin-top: 45px">Welcome, guacamole!!!</h1>
+
+	<img src="dvd.png" id="dvd">
 	<img style="margin-top: 25px; border: 2px solid black;" src="https://www.mylatinatable.com/wp-content/uploads/2016/02/guacamole-foto-heroe.jpg">
+
 	<div class="text-div">
 		<img src="petah.png">
 	</div>
+
+	<script type="text/javascript">
+		window.onload = function updateDvd() {
+			// Simple variable initialization
+			var posX = 0;
+			var posY = 0;
+
+			var xDir = 1;
+			var yDir = 1;
+
+			// Get logo from "dvd" id
+			var dvdLogo = document.getElementById("dvd");
+
+			// Interval idfk lmao
+			var id = setInterval(move, 5);
+
+			// Terrible practice idk what to do lol
+			function move() {
+				posX += xDir * 3;
+				posY += yDir * 3;
+
+				// Flip direction
+				if (posX >= screen.width || posX <= 0) {
+					xDir *= -1;
+				}
+
+				// Same for y
+				if (posY >= screen.height || posY <= 0) {
+					yDir *= -1;
+				}
+				console.log(posX);
+	
+				dvdLogo.style.left = posX + "px";
+				dvdLogo.style.top = posY + "px";
+			}
+		}
+	</script>
 </body>
 </html>
