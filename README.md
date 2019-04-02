@@ -1,3 +1,0 @@
-# bluethegermanshepherd
-
-GAI MORE :sunglasses:
