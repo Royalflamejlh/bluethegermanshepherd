@@ -1,4 +1,8 @@
-window.onload = function updateDvd() {
+window.onload = function bootup() {
+	updateDvd();
+}
+
+function updateDvd() {
 	// Simple variable initialization
 	var posX = 0;
 	var posY = 0;
