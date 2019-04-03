@@ -18,8 +18,8 @@ function updateDvd() {
 
 	// Terrible practice idk what to do lol
 	function move() {
-		posX += xDir * 3;
-		posY += yDir * 3;
+		posX += xDir * 1.5;
+		posY += yDir * 1.5;
 
 		// Flip direction
 		if (posX >= $(window).width() || posX <= 0) {
