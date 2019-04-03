@@ -22,12 +22,12 @@ function updateDvd() {
 		posY += yDir * 3;
 
 		// Flip direction
-		if (posX >= $(document).width() || posX <= 0) {
+		if (posX >= $(window).width() || posX <= 0) {
 			xDir *= -1;
 		}
 
 		// Same for y
-		if (posY >= $(document).height() || posY <= 0) {
+		if (posY >= $(window).height() || posY <= 0) {
 			yDir *= -1;
 		}
 
