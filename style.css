@@ -1,5 +1,6 @@
 body {
-	background-color: #82C3E5;
+	background-image: url('images/background1.gif');
+	background-repeat: no-repeat;
 	text-align: center;
 
 	font-family: "Comic Sans MS"
