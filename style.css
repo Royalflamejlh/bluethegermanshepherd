@@ -14,19 +14,8 @@ body {
 	display: inline-block;
 }
 
-.topnav {
-	overflow: hidden;
-	background-color: white;
-	color: white;
-}
-
 #dvd {
 	position: absolute;
-}
-
-#adaptable {
-	max-width: 100%;
-	height: auto;
 }
 
 img {
