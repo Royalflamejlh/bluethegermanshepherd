@@ -21,13 +21,13 @@ function updateDvd() {
 		posX += xDir * 1.5;
 		posY += yDir * 1.5;
 
-		// Flip direction
-		if (posX >= document.documentElement.clientWidth || posX <= 0) {
+		// Flip direction on collision
+		if (posX + dvdLogo.offsetWidth >= document.documentElement.clientWidth - 1|| posX <= 0) {
 			xDir *= -1;
 		}
 
 		// Same for y
-		if (posY >= document.documentElement.clientHeight || posY <= 0) {
+		if (posY + dvdLogo.offsetHeight >= document.documentElement.clientHeight - 1 || posY <= 0) {
 			yDir *= -1;
 		}
 
