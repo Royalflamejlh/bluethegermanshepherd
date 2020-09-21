@@ -22,10 +22,65 @@
 	</a>
 	
 </div>
+<div style="background-color: white">
+	<h1>Minecraft</h1>
+	<p> For SMP: mc.bluethegermanshepherd.club or hmsq.fun</p>
+	<p>FOR EPIC HARDCORE ANARCHY: HARD.BLUETHEGERMANSHEPHERD.CLUB OR HARD.HMSQ.FUN</p>
 
-<h1>Minecraft</h1>
-<p> For SMP: mc.bluethegermanshepherd.club or hmsq.fun</p>
-<p>FOR EPIC HARDCORE ANARCHY: HARD.BLUETHEGERMANSHEPHERD.CLUB OR HARD.HMSQ.FUN</p>
+	<form
+	  action="https://formspree.io/xdopogyy"
+	  method="POST"
+	>
+	  <label>
+		Your email(Use the same email in checkout):
+		<input type="text" name="_replyto">
+	  </label>
+	  <label>
+		Your Minecraft UUID:
+		<textarea name="message"></textarea>
+	  </label>
 
+	  <!-- your other form fields go here -->
+
+	  <button type="submit">Send</button>
+	</form>
+
+	<div id="smart-button-container">
+		  <div style="text-align: center;">
+			<div id="paypal-button-container"></div>
+		  </div>
+		</div>
+	  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+	  <script>
+		function initPayPalButton() {
+		  paypal.Buttons({
+			style: {
+			  shape: 'rect',
+			  color: 'gold',
+			  layout: 'vertical',
+			  label: 'buynow',
+			  
+			},
+
+			createOrder: function(data, actions) {
+			  return actions.order.create({
+				purchase_units: [{"description":"Buy lifetime access to the Minecraft server!","amount":{"currency_code":"USD","value":1}}]
+			  });
+			},
+
+			onApprove: function(data, actions) {
+			  return actions.order.capture().then(function(details) {
+				alert('Transaction completed by ' + details.payer.name.given_name + '!');
+			  });
+			},
+
+			onError: function(err) {
+			  console.log(err);
+			}
+		  }).render('#paypal-button-container');
+		}
+		initPayPalButton();
+	  </script>
+</div>
 </body>
 </html>
