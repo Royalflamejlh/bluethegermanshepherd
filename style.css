@@ -26,6 +26,7 @@ body {
 	position: absolute;
 	transform-origin:50% 50%;
     animation:2s rotateRight infinite linear; 
+	pointer-events: none;
 }
 
 img {
