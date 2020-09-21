@@ -1,3 +1,7 @@
+* {
+   cursor: url('images/paul.png'), auto;
+}
+
 .topnav {
 	overflow: hidden;
 	background-color: white;
