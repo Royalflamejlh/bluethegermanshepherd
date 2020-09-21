@@ -12,7 +12,7 @@ function updateDvd() {
 	// Get logo from "dvd" id
 	var dvdLogo = document.getElementById("dvd");
 
-	// Interval idfk lmao
+	// Interval idf lmao
 	var id = setInterval(move, 5);
 
 	// Terrible practice idk what to do lol
