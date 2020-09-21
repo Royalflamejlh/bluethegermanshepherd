@@ -14,8 +14,18 @@ body {
 	display: inline-block;
 }
 
+@keyframes rotateRight{
+    100%{ transform:rotate(360deg); }
+}
+
 #dvd {
 	position: absolute;
+}
+
+#banjo {
+	position: absolute;
+	transform-origin:50% 50%;
+    animation:2s rotateRight infinite linear; 
 }
 
 img {

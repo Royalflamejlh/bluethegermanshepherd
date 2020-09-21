@@ -1,7 +1,6 @@
 window.onload = function bootup() {
 	updateDvd();
 }
-
 function updateDvd() {
 	// Simple variable initialization
 	var posX = 0;
@@ -25,7 +24,6 @@ function updateDvd() {
 		if (posX + dvdLogo.offsetWidth >= document.documentElement.clientWidth - 1|| posX <= 0) {
 			xDir *= -1;
 		}
-
 		// Same for y
 		if (posY + dvdLogo.offsetHeight >= document.documentElement.clientHeight - 1 || posY <= 0) {
 			yDir *= -1;
@@ -35,3 +33,22 @@ function updateDvd() {
 		dvdLogo.style.top = posY + "px";
 	}
 }
+function banjo(e){
+	
+	  var mouseX = e.clientX;
+	  var mouseY = e.clientY;
+	  var tracker = document.getElementById('banjo');
+	  var trackerX = -60;
+	  var trackerY = 5;
+	  
+	  follow();
+	  function follow() {
+			trackerX += (mouseX);
+			trackerY += (mouseY);
+            console.log(parseInt(trackerX));
+			document.getElementById('banjo').style.left = parseInt(trackerX) + "px";
+			document.getElementById('banjo').style.top = parseInt(trackerY) + "px";
+			console.log(document.getElementById('banjo').style.left);
+		}
+
+	}
