@@ -5,17 +5,20 @@ body {
 
 	font-family: "Comic Sans";
 }
-
 .text-div {
 	background-color: #93D8E8;
 
 	border: 3px solid black;
-
+	pointer-events: none;
 	display: inline-block;
 }
 
 @keyframes rotateRight{
     100%{ transform:rotate(360deg); }
+}
+#noteplace {
+	width: auto;
+	height: auto;
 }
 
 #dvd {
@@ -28,6 +31,15 @@ body {
     animation:2s rotateRight infinite linear; 
 	pointer-events: none;
 }
+
+
+#note1, #note2, #note3, #note4, #note5 {
+	position: absolute;
+	transform-origin:50% 50%;
+    animation:2s rotateRight infinite linear; 
+	pointer-events: none;
+}
+
 
 img {
 	max-width: 100%;

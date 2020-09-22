@@ -1,6 +1,7 @@
 window.onload = function bootup() {
 	updateDvd();
 }
+
 function updateDvd() {
 	// Simple variable initialization
 	var posX = 0;
@@ -13,7 +14,7 @@ function updateDvd() {
 	var dvdLogo = document.getElementById("dvd");
 
 	// Interval idf lmao
-	var id = setInterval(move, 5);
+	//var id = setInterval(move, 5);
 
 	// Terrible practice idk what to do lol
 	function move() {
@@ -31,7 +32,9 @@ function updateDvd() {
 
 		dvdLogo.style.left = posX + "px";
 		dvdLogo.style.top = posY + "px";
+		window.requestAnimationFrame(move);
 	}
+	move();
 }
 function banjo(e){
 	
@@ -45,10 +48,8 @@ function banjo(e){
 	  function follow() {
 			trackerX += (mouseX);
 			trackerY += (mouseY);
-            console.log(parseInt(trackerX));
 			document.getElementById('banjo').style.left = parseInt(trackerX) + "px";
 			document.getElementById('banjo').style.top = parseInt(trackerY) + "px";
-			console.log(document.getElementById('banjo').style.left);
 		}
 
 	}
