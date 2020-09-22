@@ -23,6 +23,7 @@ body {
 
 #dvd {
 	position: absolute;
+	pointer-events: none;
 }
 
 #banjo {
