@@ -31,7 +31,9 @@ body {
     animation:2s rotateRight infinite linear; 
 	pointer-events: none;
 }
-
+#guac {
+	pointer-events: none;
+}
 
 #note1, #note2, #note3, #note4, #note5 {
 	position: absolute;
@@ -42,7 +44,6 @@ body {
 
 
 img {
-	pointer-events: none;
 	max-width: 100%;
 	height: auto;
 }
