@@ -38,7 +38,6 @@ function music() {
 		}
 		function animate(e){
 			if(w <= 0){
-				//pauseAudio();
 				return;
 			}
 			e.style.width = w + "px";
